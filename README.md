@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 func ordenarMariz(){
- 	var mat [12]int
+ 	var mat[12]int
     for f :=0 ; f < 12;f++ {
 
             fmt.Print("Ingrese numero:")
@@ -31,37 +31,23 @@ tmp := 0
         fmt.Print("[",mat[i],"]")
     }
     fmt.Println()
-
 }
-func DESORDENADA(numerodesorden[]int){
+    func rutinas(matriz[]int) {
+    	tam := len(matriz)/4
+    	go mat(matriz[:tam])
+    	go mat(matriz[tam:tam*2])
+    	go mat(matriz[tam*2:tam*3])
+    	go mat(matriz[tam*3:])
+    	mat(matriz)
 
- 	var tempo  int
-	for i := 0; i < len(numerodesorden); i++ {
-	  	for j := 0; j < len(numerodesorden); j++ {
-	   		if numerodesorden[i] > numerodesorden[j] {
-	    		tempo = numerodesorden[i]
-	    		numerodesorden[i] = numerodesorden[j]
-	    		numerodesorden[j] = tempo
-	   		}
-	  	}
-	}
-	mostrar_array(numerodesordenada)
-	temp.Done()
-}
-func rutinas(matriz[]int) {
-	tam := len(matriz)/4
-	go orden(matriz[:tam])
-	go orden(matriz[tam:tam*2])
-	go orden(matriz[tam*2:tam*3])
-	go orden(matriz[tam*3:])
-	orden(matriz)
+    }
 
-}
+
 
 func main() {
 		ordenarMariz()
-  	slice := matriz[:i]
-  	rutinas(slice)
-  	temp.Wait()
+    rutinas(slice)
+    temp.Wait()
+
 
 }
